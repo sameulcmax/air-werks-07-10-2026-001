@@ -40,11 +40,11 @@ export const HomePage: React.FC<HomePageProps> = ({
     : VEHICLE_DATA.filter(v => v.make === selectedMakeTab);
 
   return (
-    <div className="space-y-24 md:space-y-32">
+    <div className="space-y-15 md:space-y-20">
       {/* ========================================================
           1. HERO SECTION
           ======================================================== */}
-      <section className="relative min-h-[62vh] md:min-h-[92vh] flex items-center justify-center pt-16 sm:pt-20 md:pt-24 pb-2 md:pb-16 overflow-hidden bg-[#080A0D]">
+      <section className="relative min-h-[44vh] md:min-h-[65vh] flex items-center justify-center pt-23 sm:pt-28 md:pt-25 pb-2 md:pb-5 overflow-hidden bg-[#080A0D]">
         {/* Background Realistic Truck Photo with Dramatic Vignette */}
         <div className="absolute inset-0 z-0">
           <a href="">
@@ -65,19 +65,19 @@ export const HomePage: React.FC<HomePageProps> = ({
         </div>
 
         {/* Hero Content */}
-        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-2 sm:py-4 md:py-12">
-          <div className="max-w-3xl space-y-3 sm:space-y-4 md:space-y-6">
+        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-8 sm:pt-10 md:pt-14 pb-2 sm:pb-4 md:pb-12">
+          <div className="max-w-2xl space-y-3 sm:space-y-4 md:space-y-6">
             
             {/* Small engineered label */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#078FE8]/15 border backdrop-blur-md">
               <span className="w-2 h-2 rounded-full bg-[#078FE8] animate-ping" />
-              <span className="text-xs font-mono font-bold tracking-[0.25em] text-white uppercase">
+              <span className="text-[10px] sm:text-xs font-mono font-bold tracking-[0.25em] text-white uppercase">
                 COLD AIR INTAKE SPECIALISTS
               </span>
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-[#F7F9FC] tracking-tight leading-[1.05] font-heading">
+            <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#F7F9FC] tracking-tight leading-[1.05] font-heading">
               BREATHE BETTER.{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#078FE8] via-[#38BDF8] to-white block sm:inline">
                 PERFORM BETTER.
@@ -85,12 +85,12 @@ export const HomePage: React.FC<HomePageProps> = ({
             </h1>
 
             {/* Supporting Subline */}
-            <p className="text-sm sm:text-xl font-medium text-white/90">
+            <p className="text-xs sm:text-lg font-medium text-white/90">
               Cold Air Intake Sales & Professional Installation for Today's Trucks.
             </p>
 
             {/* Supporting Paragraph */}
-            <p className="hidden sm:block sm:text-base text-[#B9C0C8] font-normal leading-relaxed max-w-2xl">
+            <p className="hidden sm:block sm:text-sm text-[#B9C0C8] font-normal leading-relaxed max-w-xl">
               Air Werks helps truck owners find the right cold air intake for their vehicle and provides professional installation using products from trusted performance brands.
             </p>
 
@@ -103,14 +103,6 @@ export const HomePage: React.FC<HomePageProps> = ({
               >
                 FIND YOUR INTAKE
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </button>
-
-              <button
-                type="button"
-                onClick={() => onOpenQuote()}
-                className="px-6 py-2.5 md:px-8 md:py-4 rounded-xl bg-[#11151A]/80 hover:bg-[#1B2026] text-white border border-[#2E3743] hover:border-[#078FE8]/60 font-mono font-bold text-sm tracking-wider backdrop-blur-md transition-all flex items-center justify-center gap-2 cursor-pointer"
-              >
-                REQUEST A QUOTE
               </button>
             </div>
 
@@ -130,101 +122,6 @@ export const HomePage: React.FC<HomePageProps> = ({
               </div>
             </div>
 
-          </div>
-        </div>
-      </section>
-
-      {/* ========================================================
-          2. SECTION: WHY AIR WERKS
-          ======================================================== */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionHeading
-          badge="THE AIR WERKS ADVANTAGE"
-          title="YOUR TRUCK. YOUR BUILD."
-          highlight="THE RIGHT INTAKE."
-          subtitle="We focus on matching customers with cold-air intake systems engineered specifically for their truck, engine displacement, and driving application."
-          alignment="center"
-        />
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
-          {/* Feature 01 */}
-          <div className="bg-[#11151A] rounded-2xl border border-[#2E3743] p-6 hover:border-[#078FE8]/50 transition-all flex flex-col justify-between group">
-            <div className="space-y-4">
-              <div className="flex items-center justify-between">
-                <span className="text-2xl font-mono font-black text-[#078FE8]/40 group-hover:text-[#078FE8] transition-colors">
-                  01
-                </span>
-                <div className="p-2.5 rounded-xl bg-[#1B2026] text-[#078FE8]">
-                  <Sliders className="w-5 h-5" />
-                </div>
-              </div>
-              <h3 className="text-lg font-bold text-white tracking-tight">
-                FITMENT FIRST
-              </h3>
-              <p className="text-xs sm:text-sm text-[#B9C0C8] leading-relaxed">
-                We help identify the intake system designed for your specific vehicle and engine, ensuring perfect sensor calibration and zero dash warning lights.
-              </p>
-            </div>
-          </div>
-
-          {/* Feature 02 */}
-          <div className="bg-[#11151A] rounded-2xl border border-[#2E3743] p-6 hover:border-[#078FE8]/50 transition-all flex flex-col justify-between group">
-            <div className="space-y-4">
-              <div className="flex items-center justify-between">
-                <span className="text-2xl font-mono font-black text-[#078FE8]/40 group-hover:text-[#078FE8] transition-colors">
-                  02
-                </span>
-                <div className="p-2.5 rounded-xl bg-[#1B2026] text-[#078FE8]">
-                  <ShieldCheck className="w-5 h-5" />
-                </div>
-              </div>
-              <h3 className="text-lg font-bold text-white tracking-tight">
-                TRUSTED BRANDS
-              </h3>
-              <p className="text-xs sm:text-sm text-[#B9C0C8] leading-relaxed">
-                We promote and install products from performance brands we can source and support, including S&B Filters, aFe POWER, K&N, Volant, and AEM.
-              </p>
-            </div>
-          </div>
-
-          {/* Feature 03 */}
-          <div className="bg-[#11151A] rounded-2xl border border-[#2E3743] p-6 hover:border-[#078FE8]/50 transition-all flex flex-col justify-between group">
-            <div className="space-y-4">
-              <div className="flex items-center justify-between">
-                <span className="text-2xl font-mono font-black text-[#078FE8]/40 group-hover:text-[#078FE8] transition-colors">
-                  03
-                </span>
-                <div className="p-2.5 rounded-xl bg-[#1B2026] text-[#078FE8]">
-                  <Wrench className="w-5 h-5" />
-                </div>
-              </div>
-              <h3 className="text-lg font-bold text-white tracking-tight">
-                PROFESSIONAL INSTALLATION
-              </h3>
-              <p className="text-xs sm:text-sm text-[#B9C0C8] leading-relaxed">
-                Your intake is installed correctly and cleanly by someone who understands the application, with torque checks and clean engine bay routing.
-              </p>
-            </div>
-          </div>
-
-          {/* Feature 04 */}
-          <div className="bg-[#11151A] rounded-2xl border border-[#2E3743] p-6 hover:border-[#078FE8]/50 transition-all flex flex-col justify-between group">
-            <div className="space-y-4">
-              <div className="flex items-center justify-between">
-                <span className="text-2xl font-mono font-black text-[#078FE8]/40 group-hover:text-[#078FE8] transition-colors">
-                  04
-                </span>
-                <div className="p-2.5 rounded-xl bg-[#1B2026] text-[#078FE8]">
-                  <Activity className="w-5 h-5" />
-                </div>
-              </div>
-              <h3 className="text-lg font-bold text-white tracking-tight">
-                PERFORMANCE FOCUSED
-              </h3>
-              <p className="text-xs sm:text-sm text-[#B9C0C8] leading-relaxed">
-                Improve airflow and complement the way your truck is built and driven — whether it is a daily commuter, heavy towing rig, or overland explorer.
-              </p>
-            </div>
           </div>
         </div>
       </section>
@@ -334,6 +231,103 @@ export const HomePage: React.FC<HomePageProps> = ({
           </button>
         </div>
       </section>
+
+
+      {/* ========================================================
+          2. SECTION: WHY AIR WERKS
+          ======================================================== */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <SectionHeading
+          badge="THE AIR WERKS ADVANTAGE"
+          title="YOUR TRUCK. YOUR BUILD."
+          highlight="THE RIGHT INTAKE."
+          subtitle="We focus on matching customers with cold-air intake systems engineered specifically for their truck, engine displacement, and driving application."
+          alignment="center"
+        />
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+          {/* Feature 01 */}
+          <div className="bg-[#11151A] rounded-2xl border border-[#2E3743] p-6 hover:border-[#078FE8]/50 transition-all flex flex-col justify-between group">
+            <div className="space-y-4">
+              <div className="flex items-center justify-between">
+                <span className="text-2xl font-mono font-black text-[#078FE8]/40 group-hover:text-[#078FE8] transition-colors">
+                  01
+                </span>
+                <div className="p-2.5 rounded-xl bg-[#1B2026] text-[#078FE8]">
+                  <Sliders className="w-5 h-5" />
+                </div>
+              </div>
+              <h3 className="text-lg font-bold text-white tracking-tight">
+                FITMENT FIRST
+              </h3>
+              <p className="text-xs sm:text-sm text-[#B9C0C8] leading-relaxed">
+                We help identify the intake system designed for your specific vehicle and engine, ensuring perfect sensor calibration and zero dash warning lights.
+              </p>
+            </div>
+          </div>
+
+          {/* Feature 02 */}
+          <div className="bg-[#11151A] rounded-2xl border border-[#2E3743] p-6 hover:border-[#078FE8]/50 transition-all flex flex-col justify-between group">
+            <div className="space-y-4">
+              <div className="flex items-center justify-between">
+                <span className="text-2xl font-mono font-black text-[#078FE8]/40 group-hover:text-[#078FE8] transition-colors">
+                  02
+                </span>
+                <div className="p-2.5 rounded-xl bg-[#1B2026] text-[#078FE8]">
+                  <ShieldCheck className="w-5 h-5" />
+                </div>
+              </div>
+              <h3 className="text-lg font-bold text-white tracking-tight">
+                TRUSTED BRANDS
+              </h3>
+              <p className="text-xs sm:text-sm text-[#B9C0C8] leading-relaxed">
+                We promote and install products from performance brands we can source and support, including S&B Filters, aFe POWER, K&N, Volant, and AEM.
+              </p>
+            </div>
+          </div>
+
+          {/* Feature 03 */}
+          <div className="bg-[#11151A] rounded-2xl border border-[#2E3743] p-6 hover:border-[#078FE8]/50 transition-all flex flex-col justify-between group">
+            <div className="space-y-4">
+              <div className="flex items-center justify-between">
+                <span className="text-2xl font-mono font-black text-[#078FE8]/40 group-hover:text-[#078FE8] transition-colors">
+                  03
+                </span>
+                <div className="p-2.5 rounded-xl bg-[#1B2026] text-[#078FE8]">
+                  <Wrench className="w-5 h-5" />
+                </div>
+              </div>
+              <h3 className="text-lg font-bold text-white tracking-tight">
+                PROFESSIONAL INSTALLATION
+              </h3>
+              <p className="text-xs sm:text-sm text-[#B9C0C8] leading-relaxed">
+                Your intake is installed correctly and cleanly by someone who understands the application, with torque checks and clean engine bay routing.
+              </p>
+            </div>
+          </div>
+
+          {/* Feature 04 */}
+          <div className="bg-[#11151A] rounded-2xl border border-[#2E3743] p-6 hover:border-[#078FE8]/50 transition-all flex flex-col justify-between group">
+            <div className="space-y-4">
+              <div className="flex items-center justify-between">
+                <span className="text-2xl font-mono font-black text-[#078FE8]/40 group-hover:text-[#078FE8] transition-colors">
+                  04
+                </span>
+                <div className="p-2.5 rounded-xl bg-[#1B2026] text-[#078FE8]">
+                  <Activity className="w-5 h-5" />
+                </div>
+              </div>
+              <h3 className="text-lg font-bold text-white tracking-tight">
+                PERFORMANCE FOCUSED
+              </h3>
+              <p className="text-xs sm:text-sm text-[#B9C0C8] leading-relaxed">
+                Improve airflow and complement the way your truck is built and driven — whether it is a daily commuter, heavy towing rig, or overland explorer.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
 
       {/* ========================================================
           4. SECTION: GAS + DIESEL
