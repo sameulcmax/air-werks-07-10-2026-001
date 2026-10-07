@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-brand-blue: #078FE8;
+    --color-brand-deep-blue: #0757B8;
+    --color-brand-black: #080A0D;
+    --color-brand-charcoal: #11151A;
+    --color-brand-graphite: #1B2026;
+    --color-brand-surface: #222832;
+    --color-brand-border: #2E3743;
+    --color-brand-silver: #B9C0C8;
+    --color-brand-white: #F7F9FC;
+    --font-heading: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+    --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  body {
+    background-color: #080A0D;
+    color: #F7F9FC;
+    font-family: var(--font-body);
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    letter-spacing: -0.025em;
+  }
+}
+
+/* Custom airflow stream animation */
+@keyframes airflowStream {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.8;
+  }
+  70% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateX(200%);
+    opacity: 0;
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.animate-airflow {
+  animation: airflowStream 3.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.animate-airflow-delayed {
+  animation: airflowStream 4.2s cubic-bezier(0.4, 0, 0.2, 1) 1.5s infinite;
+}
+
+.animate-glow {
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #080A0D;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #232A34;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #078FE8;
+}
+
+/* Focus outline */
+*:focus-visible {
+  outline: 2px solid #078FE8;
+  outline-offset: 2px;
+}
